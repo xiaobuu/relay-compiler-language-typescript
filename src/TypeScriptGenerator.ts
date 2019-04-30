@@ -1,9 +1,10 @@
 import {
   IRTransforms,
+  IRVisitor,
+  SchemaUtils,
   TypeGenerator,
   TypeGeneratorOptions
 } from "relay-compiler";
-import * as RelayCompilerPublic from "relay-compiler/lib/RelayCompilerPublic";
 
 import { GraphQLNonNull } from "graphql";
 import * as ts from "typescript";
@@ -16,10 +17,6 @@ import {
 
 // Get the types
 import * as GraphQLCompilerTypes from "graphql-compiler";
-
-const GraphQLCompiler: typeof GraphQLCompilerTypes = RelayCompilerPublic;
-
-const { IRVisitor, SchemaUtils } = GraphQLCompiler;
 
 const { isAbstractType } = SchemaUtils;
 
